@@ -1,31 +1,39 @@
-# OpenCV-Bootcamp
+# OpenCV Bootcamp
 
-About This Course
-OpenCV Bootcamp is the only official OpenCV course on the internet designed by the expert team at OpenCV.org, which makes it the most authentic source of knowledge for Computer Vision, Deep Learning, and AI.
+Welcome to the official OpenCV Bootcamp! I have completed it. 🚀
 
-In just 3 hours, this mini course will introduce you to a wide range of exciting topics such as Image & Video Manipulation, Image Enhancement, Filtering, Edge Detection, Object Detection and Tracking, Face Detection, and the OpenCV Deep Learning Module.
+## About This Course
 
-This well-structured and comprehensive Computer Vision course will build your curiosity, appetite and intuition for solving real-world commercial and social problems using the power of Computer Vision.
+OpenCV Bootcamp is the **ultimate source of knowledge** for Computer Vision, Deep Learning, and AI. Developed by the expert team at OpenCV.org, this course provides a comprehensive understanding of cutting-edge techniques and practical applications.
 
-link to course: https://courses.opencv.org/courses/course-v1:OpenCV+Bootcamp+CV0/about
-Youtube: https://www.youtube.com/user/opencvdev
-Share with friends and family!Tweet that you've enrolled in this course Post a Facebook message to say you've enrolled in this course Email someone to say you've enrolled in this course
-Course NumberFree OpenCV Bootcamp
-Classes StartAnytime, self-paced
-Estimated Effort02:00
+In just **3 hours**, you'll dive into exciting topics, including:
 
-Meet the Team
-Satya Mallick Profile
-Satya Mallick
-CEO, OpenCV.org
-Owner, Big Vision LLC
+- **Image & Video Manipulation**: Learn how to process and enhance visual content.
+- **Filtering**: Explore techniques to enhance image quality and reduce noise.
+- **Edge Detection**: Uncover edges and boundaries in images.
+- **Object Detection and Tracking**: Master the art of identifying and tracking objects.
+- **Face Detection**: Understand how to detect faces in images and videos.
+- **OpenCV Deep Learning Module**: Harness the power of deep learning for computer vision tasks.
 
-Vikas Gupta Profile
-Vikas Gupta
-Course Director
-Vice President, Big Vision LLC
+## Why Choose OpenCV Bootcamp?
 
-Bill Kromydas Profile
-Bill Kromydas
-Lead Instructor
-Senior AI Engineer, Big Vision LLC
+- **Authentic Source**: As the only official OpenCV course on the internet, OpenCV Bootcamp is backed by the creators themselves.
+- **Structured Learning**: Our well-organized curriculum builds your curiosity, appetite, and intuition for solving real-world problems.
+- **Real-World Applications**: Gain practical skills to tackle commercial and social challenges using Computer Vision.
+
+## Course Details
+
+- **Course Link**: [OpenCV Bootcamp](https://courses.opencv.org/courses/course-v1:OpenCV+Bootcamp+CV0/about)
+- **YouTube Channel**: [OpenCVDev](https://www.youtube.com/user/opencvdev)
+- **Share the Excitement!**:
+  - Tweet that you've enrolled in this course.
+  - Post a Facebook message to let your network know.
+  - Email someone who would benefit from this knowledge.
+
+## Meet the Team
+
+Get to know the experts behind OpenCV Bootcamp:
+
+- **Satya Mallick**: CEO of OpenCV.org, Owner of Big Vision LLC
+- **Vikas Gupta**: Course Director, Vice President at Big Vision LLC
+- **Bill Kromydas**: Lead Instructor, Senior AI Engineer at Big Vision LLC
