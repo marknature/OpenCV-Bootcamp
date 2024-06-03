@@ -33,6 +33,7 @@ In just **3 hours**, you'll dive into exciting topics, including:
 ## Course Details
 
 - **Course Link**: [OpenCV Bootcamp](https://courses.opencv.org/courses/course-v1:OpenCV+Bootcamp+CV0/about)
+- - **Course Video**: [OpenCV Bootcamp Video](https://courses.opencv.org/courses/course-v1:OpenCV+Bootcamp+CV0/about#video-modal)
 - **YouTube Channel**: [OpenCVDev](https://www.youtube.com/user/opencvdev)
 - **Share the Excitement!**:
   - Tweet that you've enrolled in this course.
