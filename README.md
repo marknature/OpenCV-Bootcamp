@@ -2,6 +2,15 @@
 
 Welcome to the official OpenCV Bootcamp! I have completed it. 🚀
 
+<div align="center">
+
+<!--- Image -->
+<br>
+<img alt="OpenCV logo" width="300" src="https://github.com/marknature/OpenCV-Bootcamp/blob/main/README_assets/opencv.png"> <br>
+<img alt="OpenCV logo" width="300" src="https://github.com/marknature/OpenCV-Bootcamp/blob/main/README_assets/lnt.jpg">
+<br>
+</div>
+
 ## About This Course
 
 OpenCV Bootcamp is the **ultimate source of knowledge** for Computer Vision, Deep Learning, and AI. Developed by the expert team at OpenCV.org, this course provides a comprehensive understanding of cutting-edge techniques and practical applications.
