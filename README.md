@@ -1,6 +1,6 @@
 # OpenCV Bootcamp
 
-Welcome to the official OpenCV Bootcamp! I have completed it. 🚀
+Welcome to the official OpenCV Bootcamp, for Computer Vision! I have completed it. 🚀
 
 <div align="center">
 
