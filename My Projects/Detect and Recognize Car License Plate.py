@@ -19,10 +19,7 @@ def sort_cont(character_contours):
 	i = 0
 	boundingBoxes = [cv2.boundingRect(c) for c in character_contours] 
 	
-	(character_contours, boundingBoxes) = zip(*sorted(zip(character_contours, 
-														boundingBoxes), 
-													key = lambda b: b[1][i], 
-													reverse = False)) 
+	(character_contours, boundingBoxes) = zip(*sorted(zip(character_contours, boundingBoxes), key = lambda b: b[1][i] reverse = False)) 
 	
 	return character_contours 
 
@@ -36,10 +33,7 @@ def segment_chars(plate_img, fixed_width):
 	"""
 	V = cv2.split(cv2.cvtColor(plate_img, cv2.COLOR_BGR2HSV))[2] 
 
-	thresh = cv2.adaptiveThreshold(V, 255, 
-								cv2.ADAPTIVE_THRESH_GAUSSIAN_C, 
-								cv2.THRESH_BINARY, 
-								11, 2) 
+	thresh = cv2.adaptiveThreshold(V, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, cv2.THRESH_BINARY, 11, 2) 
 	
 	thresh = cv2.bitwise_not(thresh) 
 
@@ -108,9 +102,7 @@ def segment_chars(plate_img, fixed_width):
 
 				cv2.drawContours(charCandidates, [hull], -1, 255, -1) 
 
-	contours, hier = cv2.findContours(charCandidates, 
-										cv2.RETR_EXTERNAL, 
-										cv2.CHAIN_APPROX_SIMPLE) 
+	contours, hier = cv2.findContours(charCandidates, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE) 
 	
 	if contours: 
 		contours = sort_cont(contours) 
@@ -128,8 +120,7 @@ def segment_chars(plate_img, fixed_width):
 				x = x - addPixel 
 			else: 
 				x = 0
-			temp = bgr_thresh[y:y + h + (addPixel * 2), 
-							x:x + w + (addPixel * 2)] 
+			temp = bgr_thresh[y:y + h + (addPixel * 2), x:x + w + (addPixel * 2)] 
 
 			characters.append(temp) 
 			
@@ -149,8 +140,7 @@ class PlateFinder:
 		# maximum area of the plate 
 		self.max_area = maxPlateArea 
 
-		self.element_structure = cv2.getStructuringElement( 
-							shape = cv2.MORPH_RECT, ksize =(22, 3)) 
+		self.element_structure = cv2.getStructuringElement(shape = cv2.MORPH_RECT, ksize =(22, 3)) 
 
 	def preprocess(self, input_img): 
 		
@@ -177,23 +167,21 @@ class PlateFinder:
 
 	def extract_contours(self, after_preprocess): 
 		
-		contours, _ = cv2.findContours(after_preprocess, 
-										mode = cv2.RETR_EXTERNAL, 
-										method = cv2.CHAIN_APPROX_NONE) 
+		contours, _ = cv2.findContours(after_preprocess, mode = cv2.RETR_EXTERNAL, method = cv2.CHAIN_APPROX_NONE) 
 		return contours 
 
 	def clean_plate(self, plate): 
 		
 		gray = cv2.cvtColor(plate, cv2.COLOR_BGR2GRAY) 
 		thresh = cv2.adaptiveThreshold(gray, 
-									255, 
-									cv2.ADAPTIVE_THRESH_GAUSSIAN_C, 
-									cv2.THRESH_BINARY, 
-									11, 2) 
+			255, 
+			cv2.ADAPTIVE_THRESH_GAUSSIAN_C, 
+			cv2.THRESH_BINARY, 
+			11, 2) 
 		
 		contours, _ = cv2.findContours(thresh.copy(), 
-										cv2.RETR_EXTERNAL, 
-										cv2.CHAIN_APPROX_NONE) 
+			cv2.RETR_EXTERNAL, 
+			cv2.CHAIN_APPROX_NONE) 
 
 		if contours: 
 			areas = [cv2.contourArea(c) for c in contours] 
@@ -207,7 +195,7 @@ class PlateFinder:
 			x, y, w, h = cv2.boundingRect(max_cnt) 
 			rect = cv2.minAreaRect(max_cnt) 
 			if not self.ratioCheck(max_cntArea, plate.shape[1], 
-												plate.shape[0]): 
+				plate.shape[0]): 
 				return plate, False, None
 			
 			return plate, True, [x, y, w, h] 
@@ -224,12 +212,10 @@ class PlateFinder:
 		if self.validateRatio(min_rect): 
 			x, y, w, h = cv2.boundingRect(contour) 
 			after_validation_img = input_img[y:y + h, x:x + w] 
-			after_clean_plate_img, plateFound, coordinates = self.clean_plate( 
-														after_validation_img) 
+			after_clean_plate_img, plateFound, coordinates = self.clean_plate(after_validation_img) 
 			
 			if plateFound: 
-				characters_on_plate = self.find_characters_on_plate( 
-											after_clean_plate_img) 
+				characters_on_plate = self.find_characters_on_plate(after_clean_plate_img) 
 				
 				if (characters_on_plate is not None and len(characters_on_plate) == 8): 
 					x1, y1, w1, h1 = coordinates 
