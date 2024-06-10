@@ -204,7 +204,6 @@ class PlateFinder:
 			return plate, False, None
 
 
-
 	def check_plate(self, input_img, contour): 
 		
 		min_rect = cv2.minAreaRect(contour) 
@@ -225,7 +224,6 @@ class PlateFinder:
 					return after_check_plate_img, characters_on_plate, coordinates 
 		
 		return None, None, None
-
 
 
 	def find_possible_plates(self, input_img): 
